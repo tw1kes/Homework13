@@ -21,8 +21,12 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
+    {
+        int clientOS = 0;
+        int clientDeviceYear = 2015;
+    }
 
-    public static void deliveryCard(int deliveryDistance) {
+    public static int printDeliveryTime(int deliveryDistance) {
         int deliveryTime = 0;
         if (deliveryDistance > 100) {
             System.out.println("Доставки нет");
@@ -36,6 +40,7 @@ public class Main {
             deliveryTime = deliveryTime + 3;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
+        return deliveryTime;
     }
 
     public static void main(String[] args) {
@@ -43,6 +48,6 @@ public class Main {
 
         installApp(2015, 1);
 
-        deliveryCard(95);
+        printDeliveryTime(95);
     }
 }
